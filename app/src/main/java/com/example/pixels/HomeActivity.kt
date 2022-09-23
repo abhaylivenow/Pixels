@@ -3,6 +3,7 @@ package com.example.pixels
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.example.pixels.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -16,12 +17,24 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.notes -> showToast("Notes clicked")
-                R.id.my_books -> showToast("My books clicked")
-                R.id.download_books -> showToast("Download book clicked")
+                R.id.notes -> navigateToMyNotes()
+                R.id.my_books -> navigateToMyBooks()
+                R.id.download_books -> navigateToDownloadBooks()
             }
             true
         }
+    }
+
+    private fun navigateToMyBooks() {
+        findNavController(R.id.fragmentContainerView).navigate(R.id.myBooksFragment)
+    }
+
+    private fun navigateToDownloadBooks() {
+        findNavController(R.id.fragmentContainerView).navigate(R.id.downloadBooksFragment)
+    }
+
+    private fun navigateToMyNotes() {
+        findNavController(R.id.fragmentContainerView).navigate(R.id.notesListFragment)
     }
 
     private fun showToast(message: String) {
