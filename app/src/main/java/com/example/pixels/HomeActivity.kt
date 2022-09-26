@@ -13,11 +13,11 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigationView.menu.findItem(R.id.notes).setChecked(true)
+        binding.bottomNavigationView.menu.findItem(R.id.subjects).isChecked = true
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.notes -> navigateToMyNotes()
+                R.id.subjects -> navigateToMyNotes()
                 R.id.my_books -> navigateToMyBooks()
                 R.id.download_books -> navigateToDownloadBooks()
             }

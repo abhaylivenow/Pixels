@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class NotesListFragment : Fragment() {
+class SubjectListFragment : Fragment() {
 
     val sdf = SimpleDateFormat("dd/M/yyyy")
     private lateinit var binding: FragmentNotesListBinding
@@ -35,7 +35,7 @@ class NotesListFragment : Fragment() {
 
         binding.rvNotes.apply {
             layoutManager = StaggeredGridLayoutManager(2,1)
-            adapter = SubjectsAdapter(listOfSubjects)
+            adapter = SubjectsAdapter(listOfSubjects,context)
         }
 
         binding.btnAddSubject.setOnClickListener {
