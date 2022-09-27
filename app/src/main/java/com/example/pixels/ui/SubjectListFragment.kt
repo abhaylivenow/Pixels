@@ -11,29 +11,28 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.pixels.adapter.SubjectsAdapter
 import com.example.pixels.data.Subject
-import com.example.pixels.databinding.FragmentNotesListBinding
+import com.example.pixels.databinding.FragmentSubjectListBinding
 import java.text.SimpleDateFormat
 import java.util.*
-
 
 class SubjectListFragment : Fragment() {
 
     val sdf = SimpleDateFormat("dd/M/yyyy")
-    private lateinit var binding: FragmentNotesListBinding
+    private lateinit var binding: FragmentSubjectListBinding
     private var listOfSubjects = mutableListOf<Subject>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNotesListBinding.inflate(inflater,container,false);
+        binding = FragmentSubjectListBinding.inflate(inflater,container,false);
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.rvNotes.apply {
+        binding.rvSubjects.apply {
             layoutManager = StaggeredGridLayoutManager(2,1)
             adapter = SubjectsAdapter(listOfSubjects,context)
         }

@@ -9,7 +9,7 @@
         android:id="@+id/notesListFragment"
         android:name="com.example.pixels.ui.SubjectListFragment"
         android:label="fragment_notes_list"
-        tools:layout="@layout/fragment_notes_list" >
+        tools:layout="@layout/fragment_subject_list" >
         <action
             android:id="@+id/action_notesListFragment_to_myBooksFragment"
             app:destination="@id/myBooksFragment" />

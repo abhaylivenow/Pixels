@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    app:cardCornerRadius="12dp"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_heading"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="Chapter 1: Laws of Motion"/>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6sp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="6dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:alpha="0.7"
+            android:text="This is the sample content for the chapter Laws of motion with some introduction. This is the sample content for the chapter Laws of motion with some introduction."/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
